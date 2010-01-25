@@ -1,5 +1,5 @@
 Run "mvn eclipse:eclipse" to generate Eclipse project files.  You should use the GlassFish Tools Bundle 
-for Eclipse: https://glassfishplugins.dev.java.net/
+for Eclipse (https://glassfishplugins.dev.java.net) and the Scala IDE for Eclipse (http://www.scala-lang.org/node/94).
 
 This project's persistence.xml assumes that GlassFish v3 has a JDBC Resource with a JNDI Name of "book".  
 You'll need to set that up before deploying this app.
