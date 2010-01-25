@@ -55,19 +55,26 @@
 
 					<!-- Adds WTP support to Eclipse project -->
 					<wtpversion>2.0</wtpversion>
+					<wtpContextName>javaee6-books-scala</wtpContextName>
 					<additionalProjectFacets>
 						<jst.web>2.5</jst.web>
 						<jst.jsf>1.2</jst.jsf>
 						<jsf.facelet>1.0</jsf.facelet>
 					</additionalProjectFacets>
 
-					<!-- Eclipse Scala support -->
+					<!-- Adds Scala support to Eclipse project -->
+					<sourceIncludes>
+						<sourceInclude>**/*.scala</sourceInclude>
+					</sourceIncludes>
 					<classpathContainers>
 						<classpathContainer>ch.epfl.lamp.sdt.launching.SCALA_CONTAINER</classpathContainer>
+						<classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
 					</classpathContainers>
 					<projectnatures>
 						<java.lang.String>ch.epfl.lamp.sdt.core.scalanature</java.lang.String>
 						<java.lang.String>org.eclipse.jdt.core.javanature</java.lang.String>
+						<java.lang.String>org.eclipse.wst.common.modulecore.ModuleCoreNature</java.lang.String>
+						<java.lang.String>org.eclipse.jem.workbench.JavaEMFNature</java.lang.String>
 					</projectnatures>
 					<buildcommands>
 						<java.lang.String>ch.epfl.lamp.sdt.core.scalabuilder</java.lang.String>
