@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="template.xhtml">
+    <ui:define name="title">List of the books</ui:define>
+    <ui:define name="heading">List of the books</ui:define>
+    <ui:define name="content">
+	    <h:dataTable value="#{bookController.bookList}" var="book">
+	        <h:column>
+	            <f:facet name="header">
+	                <h:outputText value="ISBN"/>
+	            </f:facet>
+	            <h:outputText value="#{book.isbn}"/>
+	        </h:column>
+	        <h:column>
+	            <f:facet name="header">
+	                <h:outputText value="Title"/>
+	            </f:facet>
+	            <h:outputText value="#{book.title}"/>
+	        </h:column>
+	        <h:column>
+	            <f:facet name="header">
+	                <h:outputText value="Price"/>
+	            </f:facet>
+	            <h:outputText value="#{book.price}"/>
+	        </h:column>
+	        <h:column>
+	            <f:facet name="header">
+	                <h:outputText value="Description"/>
+	            </f:facet>
+	            <h:outputText value="#{book.description}"/>
+	        </h:column>
+	        <h:column>
+	            <f:facet name="header">
+	                <h:outputText value="Number of pages"/>
+	            </f:facet>
+	            <h:outputText value="#{book.nbOfPage}"/>
+	        </h:column>
+	        <h:column>
+	            <f:facet name="header">
+	                <h:outputText value="Illustrations"/>
+	            </f:facet>
+	            <h:outputText value="#{book.illustrations}"/>
+	        </h:column>
+	    </h:dataTable>
+	    <h:form>
+	        <h:commandLink action="#{bookController.doNew}">Create a new book</h:commandLink>
+	    </h:form>
+    </ui:define>
+</ui:composition>
+</html>
