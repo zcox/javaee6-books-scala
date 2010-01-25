@@ -5,22 +5,13 @@ import scala.reflect._
 
 @Entity
 @NamedQuery{val name = "findAllBook", val query = "SELECT b FROM Book b"}
-class Book {
-  @Id
-  @GeneratedValue{val strategy = GenerationType.IDENTITY}
-  @BeanProperty
-  var id: Long = _
-  
+class Book extends Id with Description {
   @Column{val nullable = false}
   @BeanProperty
   var title: String = _
   
   @BeanProperty
   var price: Float = _
-  
-  @Column{val length = 2000}
-  @BeanProperty
-  var description: String = _
   
   @BeanProperty
   var isbn: String = _
