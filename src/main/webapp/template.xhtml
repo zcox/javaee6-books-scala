@@ -4,26 +4,32 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
 <head>
   <title><ui:insert name="title">Default title</ui:insert></title>
+  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+  <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
 </head>
 
 <body>
+<div class="container">
 
-<div id="header">
-    <div style="width:100!;font-size:36px;line-height:48px;background-color:navy;color:white">Books are Awesome</div>
+<div id="header" class="span-24 last">
+    <h1>Java EE 6 Books - Scala</h1>
+    <hr/>
 </div>
 
-<div id="content">
-  <h1><ui:insert name="heading">Heading</ui:insert></h1>
-  <hr/>
+<div id="content" class="span-24 last">
+  <h2><ui:insert name="heading">Heading</ui:insert></h2>
   <ui:insert name="content">
     	Content area.  
   </ui:insert>
 </div>
 
-<div id="footer">
-  <div style="background-color:navy;width:100!;color:white"><i>APress - Beginning Java EE 6</i></div>
+<div id="footer" class="span-24 last">
+  <hr/>
+  <i>APress - Beginning Java EE 6</i>
 </div>
 
+</div>
 </body>
 
 </html>
