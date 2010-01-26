@@ -1,9 +1,9 @@
 Run "mvn eclipse:eclipse" to generate Eclipse project files.  You should use the GlassFish Tools Bundle 
-for Eclipse (https://glassfishplugins.dev.java.net) and the Scala IDE for Eclipse (http://www.scala-lang.org/node/94).
+for Eclipse (https://glassfishplugins.dev.java.net) and the Scala IDE for Eclipse (http://www.scala-lang.org/node/94 ).
 
 This project's persistence.xml assumes that GlassFish v3 has a JDBC Resource with a JNDI Name of "book".  
 You'll need to set that up before deploying this app.
 
 After you generate the Eclipse project files you should be able to just import the project into Eclipse, 
 right-click it and select Run As > Run on Server, and deploy it to GlassFish v3. Then just open 
-http://localhost:8084/javaee6-books in your browser.
+http://localhost:8084/javaee6-books-scala in your browser.

@@ -3,6 +3,7 @@ package com.sourceallies.model
 import javax.persistence._
 import scala.reflect._
 
+/** Provides basic CRUD support using an injected JPA entity manager. */
 trait CrudEjb[E] {
   @PersistenceContext
   protected var manager: EntityManager = _
